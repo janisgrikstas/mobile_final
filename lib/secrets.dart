@@ -1,0 +1,6 @@
+const STREAM_KEY = 're7z65873a4k';
+const USER_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiamFuaXNncmlrc3RhczE5MzkifQ.ILfhN5eGD__MlnoXyaLUFamX82If4H_AnxRbJ6w1_tM';
+
+// Rapyd secrets
+const RAPYD_ACCESS_KEY = 'C3EEA7DE337EF8C3963C';
+const RAPYD_SECRET_KEY = '0ea23e9478766d49969ff857f02f423a9cec74954ad198addeb95a570de92e6ab86b34c62eab191f';
