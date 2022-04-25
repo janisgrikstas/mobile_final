@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TransactionPage extends StatelessWidget {
   final String destinationWalletAddress;
 
-  TransactionPage({required this.destinationWalletAddress});
+  TransactionPage({Key? key, required this.destinationWalletAddress}) : super(key: key);
 
   final TextEditingController _amountTextController = TextEditingController();
 

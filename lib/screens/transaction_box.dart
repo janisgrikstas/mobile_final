@@ -1,15 +1,17 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 import '../apyd_client.dart';
 import 'payment_details.dart';
 
 class TransactionWidget extends StatefulWidget {
-  const TransactionWidget({
+  TransactionWidget({Key? key, 
     required this.transaction,
     required this.destWalletAddress,
     required this.amount,
     required this.status,
-  });
+  }) : super(key: key);
 
   final Transfer transaction;
   final String destWalletAddress;
@@ -45,6 +47,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
           children: [
             Container(
               width: double.maxFinite,
+              
               decoration: BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.only(

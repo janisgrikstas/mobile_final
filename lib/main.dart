@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 
@@ -17,6 +19,7 @@ void main() async {
   await client.connectUser(
     User(
       id: USER_ID,
+      // ignore: prefer_const_literals_to_create_immutables
       extraData: {
         'name': 'John Smith',
         'image': '<https://i.pravatar.cc/150?img=8>',
@@ -43,8 +46,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       builder: (context, widget) {
         return StreamChat(
-          child: widget!,
           client: client,
+          child: widget!,
         );
       },
       debugShowCheckedModeBanner: false,

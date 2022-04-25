@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'dart:math';
+import 'package:convert/convert.dart';
 import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
 import 'secrets.dart';
 
 class RapydClient {
-  final _baseURL = '<https://sandboxapi.rapyd.net>';
+  final _baseURL = 'https://sandboxapi.rapyd.net';
   final _accessKey = RAPYD_ACCESS_KEY;
   final _secretKey = RAPYD_SECRET_KEY;
 
@@ -71,7 +72,7 @@ class RapydClient {
 
     var hmacSha256 = Hmac(sha256, keyEncoded); // HMAC-SHA256
     var digest = hmacSha256.convert(toSignEncoded);
-    var ss = base64.encode(digest.bytes);
+    var ss = hex.encode(digest.bytes);
     var tt = ss.codeUnits;
     var signature = base64.encode(tt);
 
